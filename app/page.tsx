@@ -72,7 +72,7 @@ export default function Home() {
               <button
                 key={q}
                 onClick={() => sendMessage(q)}
-                className="w-full text-left text-sm bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 rounded-lg px-3 py-2 transition-colors"
+                className="w-full text-left text-sm text-gray-800 bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 rounded-lg px-3 py-2 transition-colors font-medium"
               >
                 {q}
               </button>
