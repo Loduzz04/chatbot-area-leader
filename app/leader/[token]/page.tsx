@@ -133,6 +133,18 @@ export default function LeaderPage() {
       </div>
 
       <div className="flex-1 overflow-y-auto px-4 py-4 space-y-4">
+        {messages.length > 0 && (
+          <div className="flex justify-center mb-2">
+            <button
+              onClick={() => { setMessages([]); setInput(""); }}
+              className="text-xs px-4 py-2 rounded-full border-2 font-semibold transition-colors"
+              style={{ borderColor: "#1a3a4a", color: "#1a3a4a", backgroundColor: "white" }}
+            >
+              ← Torna alla home
+            </button>
+          </div>
+        )}
+
         {messages.length === 0 && (
           <div className="bg-white rounded-2xl shadow-sm p-4 flex gap-3">
             <span className="text-3xl">🧭</span>
@@ -140,6 +152,18 @@ export default function LeaderPage() {
               <p className="font-bold text-gray-900 text-base">Come posso aiutarti?</p>
               <p className="text-gray-500 text-sm mt-1">Sono il tuo assistente per il Summer Camp 2026. Chiedimi quello che ti serve!</p>
             </div>
+          </div>
+        )}
+
+        {messages.length > 0 && (
+          <div className="flex justify-center mb-2">
+            <button
+              onClick={() => { setMessages([]); setInput(""); }}
+              className="text-xs px-4 py-2 rounded-full border-2 font-semibold transition-colors"
+              style={{ borderColor: "#1a3a4a", color: "#1a3a4a", backgroundColor: "white" }}
+            >
+              ← Torna alla home
+            </button>
           </div>
         )}
 
@@ -154,6 +178,18 @@ export default function LeaderPage() {
                 {cat}
               </button>
             ))}
+          </div>
+        )}
+
+        {messages.length > 0 && (
+          <div className="flex justify-center mb-2">
+            <button
+              onClick={() => { setMessages([]); setInput(""); }}
+              className="text-xs px-4 py-2 rounded-full border-2 font-semibold transition-colors"
+              style={{ borderColor: "#1a3a4a", color: "#1a3a4a", backgroundColor: "white" }}
+            >
+              ← Torna alla home
+            </button>
           </div>
         )}
 
@@ -204,10 +240,10 @@ export default function LeaderPage() {
           <input type="text" value={input} onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && sendMessage(input)}
             placeholder="Scrivi la tua domanda..." disabled={loading}
-            className="flex-1 border border-gray-200 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-blue-400 disabled:bg-gray-50" />
+            className="flex-1 border-2 border-gray-400 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-blue-500 disabled:bg-gray-50 bg-white" />
           <button onClick={() => sendMessage(input)} disabled={loading || !input.trim()}
             className="w-10 h-10 rounded-full flex items-center justify-center text-white transition-colors flex-shrink-0"
-            style={{ backgroundColor: input.trim() && !loading ? "#2ea84a" : "#ccc" }}>➤</button>
+            style={{ backgroundColor: input.trim() && !loading ? "#2ea84a" : "#94a3b8" }}>➤</button>
         </div>
       </div>
     </div>
