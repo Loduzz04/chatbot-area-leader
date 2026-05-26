@@ -13,6 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "Astrolabio",
+  },
   title: "L astrolabio Assistant",
   description: "Area Leader Summer Camp 2026",
 };
