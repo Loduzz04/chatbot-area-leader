@@ -362,7 +362,7 @@ export const knowledgeBase: KnowledgeBlock[] = [
     id: "faq_italian_coordinator_001",
     source: "FAQ SummerCamp2026",
     category: "Contatti",
-    intent: "Italian Coordinator 2026 nomi chi sono dove",
+    intent: "Italian Coordinator 2026 nomi chi sono dove coordinator italiano sede centro",
     content: "Gli Italian Coordinator 2026 sono: Maria Cristina Marchi (Londra Egham), Anna Maria La Cava (Cirencester), Tiziana Toni (Nottingham), Federica Ippoliti (Eastbourne), Beatrice Fiorani (Bath). Contattateli solo dopo l'arrivo in campus.",
     criticality: "normale",
     escalationRequired: false,
