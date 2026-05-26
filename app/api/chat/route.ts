@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
 import { findRelevantChunks, KnowledgeBlock } from "../../../src/lib/knowledgeBase";
-import { supabaseAdmin } from "../../../src/lib/supabase";
+import { getSupabaseAdmin } from "../../../src/lib/supabase";
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
     // Verifica token se presente
     let tokenId: string | null = null;
     if (token) {
-      const { data: tokenData } = await supabaseAdmin
+      const { data: tokenData } = await getSupabaseAdmin()
         .from("leaders_tokens")
         .select("id, active, expires_at, usage_count")
         .eq("token", token)
@@ -39,7 +39,7 @@ export async function POST(request: NextRequest) {
 
       if (tokenData && tokenData.active && new Date(tokenData.expires_at) > new Date()) {
         tokenId = tokenData.id;
-        await supabaseAdmin
+        await getSupabaseAdmin()
           .from("leaders_tokens")
           .update({ usage_count: tokenData.usage_count + 1, last_used_at: new Date().toISOString() })
           .eq("id", tokenId);
@@ -70,7 +70,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Salva log su Supabase
-    await supabaseAdmin.from("chat_logs").insert({
+    await getSupabaseAdmin().from("chat_logs").insert({
       token_id: tokenId,
       question: question.trim(),
       answer,
