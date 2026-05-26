@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
     if (token) {
       const { data: tokenData } = await supabaseAdmin
         .from("leaders_tokens")
-        .select("id, active, expires_at")
+        .select("id, active, expires_at, usage_count")
         .eq("token", token)
         .single();
 
