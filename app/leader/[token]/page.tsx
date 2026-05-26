@@ -12,7 +12,7 @@ interface Message {
 const CATEGORIES = ["Tutti", "Documenti", "Viaggio", "Arrivo", "Emergenze", "Assicurazione"];
 
 const QUICK_QUESTIONS = [
-  { label: "Documenti per UK", emoji: "🇬🇧", category: "Documenti", q: "Che documenti servono per viaggiare in Gran Bretagna?" },
+  { label: "Documenti per UK", emoji: "📋", category: "Documenti", q: "Che documenti servono per viaggiare in Gran Bretagna?" },
   { label: "Minori di 14 anni", emoji: "👶", category: "Documenti", q: "I minori di 14 anni hanno bisogno di documenti speciali?" },
   { label: "Studenti INPSieme", emoji: "📋", category: "Documenti", q: "Cosa devo fare per gli studenti beneficiari INPSieme?" },
   { label: "Passaporto Capogruppo", emoji: "📘", category: "Documenti", q: "Il Capogruppo deve inviare il proprio passaporto?" },
@@ -25,7 +25,7 @@ const QUICK_QUESTIONS = [
   { label: "Studente malato", emoji: "🏥", category: "Emergenze", q: "Cosa fare se uno studente sta male?" },
   { label: "Polizza Amica", emoji: "🛡️", category: "Assicurazione", q: "Come funziona la Polizza Amica?" },
   { label: "Aprire sinistro", emoji: "📝", category: "Assicurazione", q: "Chi apre il sinistro assicurativo?" },
-  { label: "Italian Coordinator", emoji: "🇮🇹", category: "Arrivo", q: "Chi sono gli Italian Coordinator 2026?" },
+  { label: "Italian Coordinator", emoji: "🤌", category: "Arrivo", q: "Chi sono gli Italian Coordinator 2026?" },
   { label: "Area Leader", emoji: "🔐", category: "Documenti", q: "Come accedo all Area Leader?" },
   { label: "Contatti emergenza", emoji: "📞", category: "Emergenze", q: "Chi contatto in caso di emergenza?" },
 ];
@@ -240,7 +240,7 @@ export default function LeaderPage() {
           <input type="text" value={input} onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && sendMessage(input)}
             placeholder="Scrivi la tua domanda..." disabled={loading}
-            className="flex-1 border-2 border-gray-400 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-blue-500 disabled:bg-gray-50 bg-white" />
+            className="flex-1 border-2 border-gray-400 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-blue-500 disabled:bg-gray-50 bg-white text-gray-900 placeholder-gray-500" />
           <button onClick={() => sendMessage(input)} disabled={loading || !input.trim()}
             className="w-10 h-10 rounded-full flex items-center justify-center text-white transition-colors flex-shrink-0"
             style={{ backgroundColor: input.trim() && !loading ? "#2ea84a" : "#94a3b8" }}>➤</button>
