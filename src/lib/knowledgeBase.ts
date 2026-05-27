@@ -702,6 +702,167 @@ export const knowledgeBase: KnowledgeBlock[] = [
     escalationRequired: true,
     contactToShow: "Centre Manager / Welfare & Communications Manager",
   },
+  // ─── CENTRE GUIDE CIRENCESTER ────────────────────────────────────────────
+
+  {
+    id: "ciren_contatti_001",
+    source: "Centre Guide Cirencester 2025",
+    category: "Contatti Cirencester",
+    intent: "numeri utili Cirencester contatti ufficio Elac emergenza ospedale taxi",
+    content: "Numeri utili per Cirencester: Ufficio Elac Cirencester: 07579831427. Polizia/Pompieri/Ambulanza: 999. Polizia non emergenze: 101. Elac Head Office: +44 1225 443261. Ospedale: Cirencester Hospital, Tetbury Road, Cirencester, GL7 1UY, tel. 0300 421 6200. Taxi locali: A2B 01285 655651, Siren Cars 01285 652388. Indirizzo scuola: Royal Agricultural University, Cirencester, GL7 6JS.",
+    criticality: "alta",
+    escalationRequired: false,
+    contactToShow: "Elac Cirencester: 07579831427 / Emergenze: 999",
+  },
+  {
+    id: "ciren_campus_001",
+    source: "Centre Guide Cirencester 2025",
+    category: "Centro Cirencester",
+    intent: "Cirencester Royal Agricultural University campus strutture alloggio stanze doppie",
+    content: "Il corso si svolge alla Royal Agricultural University di Cirencester, a 20 minuti a piedi dal centro. Strutture: campo da gioco, tennis, palestra, aule con lavagne interattive, sala da pranzo tradizionale. Le stanze sono doppie (twin), alcune con bagno privato, altre con bagno condiviso. Biancheria cambiata settimanalmente, asciugamani forniti.",
+    criticality: "normale",
+    escalationRequired: false,
+    contactToShow: null,
+  },
+
+  // ─── CENTRE GUIDE EASTBOURNE ─────────────────────────────────────────────
+
+  {
+    id: "eastb_contatti_001",
+    source: "Centre Guide Eastbourne 2026",
+    category: "Contatti Eastbourne",
+    intent: "numeri utili Eastbourne contatti ufficio Elac emergenza ospedale homestay",
+    content: "Numeri utili per Eastbourne: Ufficio Elac Eastbourne: 07579831422. Elac Homestay Eastbourne: 07579831423. Polizia/Pompieri/Ambulanza: 999. Polizia non emergenze: 101. Elac Head Office: +44 1225 443261. Ospedale: Eastbourne District General Hospital, Kings Drive, Eastbourne, BN21 2UD, tel. 0300 131 4500, a 10 minuti di auto. Indirizzo scuola: Eastbourne College, Old Wish Road, Eastbourne, BN21 4JY.",
+    criticality: "alta",
+    escalationRequired: false,
+    contactToShow: "Elac Eastbourne: 07579831422 / Emergenze: 999",
+  },
+  {
+    id: "eastb_trasporti_001",
+    source: "Centre Guide Eastbourne 2026",
+    category: "Trasporti Eastbourne",
+    intent: "trasporti Eastbourne treno stazione Londra aeroporto Gatwick distanza",
+    content: "La stazione ferroviaria di Eastbourne e a 5 minuti a piedi dal campus con ottimi collegamenti per Londra (1 ora e 30 minuti). Tempo di trasferimento da Gatwick (LGW): circa 1 ora.",
+    criticality: "normale",
+    escalationRequired: false,
+    contactToShow: null,
+  },
+
+  // ─── CENTRE GUIDE NOTTINGHAM ─────────────────────────────────────────────
+
+  {
+    id: "notti_contatti_001",
+    source: "Centre Guide Nottingham 2025",
+    category: "Contatti Nottingham",
+    intent: "numeri utili Nottingham contatti ufficio Elac emergenza ospedale Queens Medical",
+    content: "Numeri utili per Nottingham: Ufficio Elac Nottingham: 07579831428. Polizia/Pompieri/Ambulanza: 999. Polizia non emergenze: 101. Elac Head Office: +44 1225 443261. Ospedale: Queens Medical Centre, Derby Road, Lenton, Nottingham, NG7 2UH. Indirizzo scuola: Jubilee Campus, University of Nottingham, University Park, Nottingham, NG7 2RD.",
+    criticality: "alta",
+    escalationRequired: false,
+    contactToShow: "Elac Nottingham: 07579831428 / Emergenze: 999",
+  },
+
+  // ─── CENTRE GUIDE HORSHAM ────────────────────────────────────────────────
+
+  {
+    id: "horsh_contatti_001",
+    source: "Centre Guide Horsham 2026",
+    category: "Contatti Horsham",
+    intent: "numeri utili Horsham contatti ufficio Elac emergenza ospedale Christ Hospital School",
+    content: "Numeri utili per Horsham: Ufficio Elac Horsham: 07579831424. Polizia/Pompieri/Ambulanza: 999. Polizia non emergenze: 101. Ospedale: Princess Royal Hospital, Haywards Heath, tel. 01444 441881. Indirizzo scuola: Christ Hospital School, Christ Hospital Road, Horsham, RH13 OYP. Campus nel villaggio Christ Hospital a 4km da Horsham, con stazione ferroviaria propria. Tempo da Gatwick: circa 30 minuti.",
+    criticality: "alta",
+    escalationRequired: false,
+    contactToShow: "Elac Horsham: 07579831424 / Emergenze: 999",
+  },
+
+  // ─── IRLANDA ─────────────────────────────────────────────────────────────
+
+  {
+    id: "irlanda_kilkenny_001",
+    source: "Pre-arrival pack Kilkenny 2026",
+    category: "Centro Kilkenny Irlanda",
+    intent: "Kilkenny College Irlanda ospedale contatti ATC emergenza aeroporto Dublino",
+    content: "Kilkenny College: Castlecomer Road, Kilkenny, Irlanda. A 135km da Dublino Airport, circa 1 ora e 30 minuti. Ospedale: Saint Luke Hospital Kilkenny City, tel. +353-567752484. Contatti ATC Language Schools: tel. +353-1 2845512, email info@atcireland.ie. Emergenze in Irlanda: 999 o 112.",
+    criticality: "alta",
+    escalationRequired: false,
+    contactToShow: "ATC: +353-1 2845512 / Emergenze: 999 o 112",
+  },
+  {
+    id: "irlanda_ucd_001",
+    source: "Pre-arrival pack UCD 2026",
+    category: "Centro UCD Dublino",
+    intent: "UCD Dublino University College Dublin ospedale contatti aeroporto",
+    content: "University College Dublin (UCD): Belfield, Dublin 4, D04 R6P5, Irlanda. A 20km dall aeroporto di Dublino, circa 40 minuti. Ospedali: over 16 anni - St. Vincent University Hospital, Elm Park, Dublin 4, tel. +353-1 221 4000. Under 16 anni - Crumlin Children Hospital, tel. +353-1 409 6100. Contatti ATC: +353-1 2845512.",
+    criticality: "alta",
+    escalationRequired: false,
+    contactToShow: "ATC: +353-1 2845512 / Emergenze: 999 o 112",
+  },
+  {
+    id: "irlanda_maynooth_001",
+    source: "Pre-arrival pack Maynooth 2026",
+    category: "Centro Maynooth",
+    intent: "Maynooth University Irlanda ospedale contatti aeroporto Dublino",
+    content: "Maynooth University: John Hume Building, Maynooth, Co. Kildare, Irlanda. Vicino all aeroporto di Dublino. Ospedale: Tallaght Hospital, Belgard Square North, Tallaght, Dublin 24, tel. +353-1 4142000. Contatti ATC: +353-1 2845512, info@atcireland.ie.",
+    criticality: "alta",
+    escalationRequired: false,
+    contactToShow: "ATC: +353-1 2845512 / Emergenze: 999 o 112",
+  },
+
+  // ─── USA ─────────────────────────────────────────────────────────────────
+
+  {
+    id: "usa_emergenza_001",
+    source: "GL Manual USA 2026",
+    category: "Emergenze USA",
+    intent: "emergenza USA Los Angeles Miami 911 numero emergenza polizia ambulanza",
+    content: "In caso di emergenza negli USA chiamate il 911 (polizia, pompieri, ambulanza). Il numero e gratuito anche dai telefoni pubblici. I cellulari devono essere depositati durante le lezioni e si recuperano solo dopo la classe.",
+    criticality: "critica",
+    escalationRequired: true,
+    contactToShow: "911 (USA) + staff TLA",
+  },
+  {
+    id: "usa_miami_001",
+    source: "GL Manual Miami 2026",
+    category: "Centro Miami",
+    intent: "Miami Barry University ospedale emergenza medica assicurazione Jackson",
+    content: "Centro Miami: Barry University. In caso di emergenza medica lo studente viene accompagnato al Jackson North Medical Center o ospedale vicino. Portare sempre il documento assicurativo. Conservare tutta la documentazione medica per il rimborso. Non fornire all ospedale l indirizzo del college, usare l indirizzo di residenza in Italia.",
+    criticality: "alta",
+    escalationRequired: true,
+    contactToShow: "911 (emergenze) + staff TLA",
+  },
+
+  // ─── CANADA ──────────────────────────────────────────────────────────────
+
+  {
+    id: "canada_emergenza_001",
+    source: "OI Juniors Centre Guidebook Canada 2026",
+    category: "Emergenze Canada",
+    intent: "emergenza Canada 911 numero emergenza Toronto New York Brooklyn Oxford International",
+    content: "In caso di emergenza in Canada chiamate il 911. Gli studenti ricevono un lanyard con numero di emergenza da chiamare se si perdono, risponde Oxford International Head Office. I gruppi vengono accolti all aeroporto da Activity Leader con maglietta rossa Oxford International.",
+    criticality: "critica",
+    escalationRequired: true,
+    contactToShow: "911 (Canada) + numero emergenza sul lanyard",
+  },
+  {
+    id: "canada_toronto_001",
+    source: "OI Juniors TO Centre Guidebook 2026",
+    category: "Centro Toronto",
+    intent: "Toronto Canada campus ospedale centro medico universita",
+    content: "Centro Toronto, Canada. C'e un centro medico sul campus per problemi minori. Ospedali vicini: St Michael Hospital 30 Bond St, Mount Sinai Hospital 600 University Ave, Toronto General Hospital 190 Elizabeth St. Andare all ospedale solo in caso di vera emergenza.",
+    criticality: "alta",
+    escalationRequired: false,
+    contactToShow: "911 (emergenze) + staff Oxford International",
+  },
+  {
+    id: "canada_liu_001",
+    source: "OI Juniors LIU Centre Guidebook 2026",
+    category: "Centro New York Brooklyn",
+    intent: "New York Brooklyn LIU Long Island University campus ospedale",
+    content: "Centro Long Island University (LIU) a Brooklyn, New York. Ospedali vicini: The Brooklyn Hospital Center, 121 DeKalb Ave, Brooklyn NY 11201. Brooklyn Health Center, 265 Ashland Pl, Brooklyn NY 11217.",
+    criticality: "alta",
+    escalationRequired: false,
+    contactToShow: "911 (emergenze) + staff Oxford International",
+  },
+
 ];
 
 // ─── FUNZIONE DI RICERCA ─────────────────────────────────────────────────────
