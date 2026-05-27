@@ -117,6 +117,9 @@ export default function LeaderPage() {
 
   return (
     <div className="flex flex-col h-screen max-w-lg mx-auto bg-gray-50">
+      <div className="bg-white px-4 py-2 flex justify-center border-b border-gray-100">
+        <img src="/Logo.jpeg" alt="L astrolabio" className="h-10 object-contain" />
+      </div>
       <div className="flex items-center justify-between px-4 py-3" style={{ backgroundColor: "#1a3a4a" }}>
         <div className="flex items-center gap-3">
           <span className="text-2xl">🧭</span>
@@ -155,17 +158,7 @@ export default function LeaderPage() {
           </div>
         )}
 
-        {messages.length > 0 && (
-          <div className="flex justify-center mb-2">
-            <button
-              onClick={() => { setMessages([]); setInput(""); }}
-              className="text-xs px-4 py-2 rounded-full border-2 font-semibold transition-colors"
-              style={{ borderColor: "#1a3a4a", color: "#1a3a4a", backgroundColor: "white" }}
-            >
-              ← Torna alla home
-            </button>
-          </div>
-        )}
+        
 
         {messages.length === 0 && (
           <div className="flex gap-2 overflow-x-auto pb-1">
@@ -181,25 +174,15 @@ export default function LeaderPage() {
           </div>
         )}
 
-        {messages.length > 0 && (
-          <div className="flex justify-center mb-2">
-            <button
-              onClick={() => { setMessages([]); setInput(""); }}
-              className="text-xs px-4 py-2 rounded-full border-2 font-semibold transition-colors"
-              style={{ borderColor: "#1a3a4a", color: "#1a3a4a", backgroundColor: "white" }}
-            >
-              ← Torna alla home
-            </button>
-          </div>
-        )}
+        
 
         {messages.length === 0 && (
           <div className="grid grid-cols-2 gap-2">
             {filtered.map((item) => (
               <button key={item.label} onClick={() => sendMessage(item.q)}
                 className="bg-white hover:shadow-md border border-gray-100 rounded-xl p-3 text-left transition-all">
-                <span className="text-xl">{item.emoji}</span>
-                <p className="text-xs font-semibold text-gray-800 mt-1">{item.label}</p>
+                <span className="text-2xl block mb-3">{item.emoji}</span>
+                <p className="text-xs font-semibold text-gray-800">{item.label}</p>
               </button>
             ))}
           </div>
