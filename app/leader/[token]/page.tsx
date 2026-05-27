@@ -117,8 +117,8 @@ export default function LeaderPage() {
 
   return (
     <div className="flex flex-col h-screen max-w-lg mx-auto bg-gray-50">
-      <div className="bg-white w-full">
-        <img src="/logo-header.jpg" alt="L astrolabio" className="w-full object-cover" style={{maxHeight: "120px", objectPosition: "center"}} />
+      <div className="bg-white w-full flex justify-center items-center py-2">
+        <img src="/logo-header.jpg" alt="L astrolabio" className="object-contain" style={{height: "80px"}} />
       </div>
       <div className="flex items-center justify-between px-4 py-3" style={{ backgroundColor: "#1a3a4a" }}>
         <div className="flex items-center gap-3">
